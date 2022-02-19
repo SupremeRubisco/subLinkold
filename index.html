@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <script>
+function check() {
+    var womginxURL = document.getElementById("womginx").checked;
+    document.getElementById("demo").innerHTML = womginxURL;
+    //document.writeln("<br>Your life is "+womginxURL)
+}
+
+function unchecked() {
+    document.getElementById("red").checked = false;
+}
+
+function searchbox() {
+    var searchURL = document.getElementById("URL").value;
+    document.getElementById("demo2").innerHTML = searchURL;
+    //document.writeln("<br>Your life is "+searchURL);
+    window.location.href = 'https://womginx.repl.co/main/'+searchURL;
+
+}
+    </script>
+
+    <form>   
+        <input type="text" placeholder=" Search...." name="search" id="URL">   
+        <button type="submit" onclick="searchbox()">Submit</button>   
+        <input type="radio" id="womginx" name="?s" value="one" onclick="check()">
+        <label for="womginx">womginx</label>
+        <input type="radio" id="alloy" name="?s" value="one" onclick="check()">
+        <label for="alloy">alloy</label>
+    </form>  
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</html>
