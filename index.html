@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html>
     <script>
-function check() {
-    var womginxURL = document.getElementById("womginx").checked;
-    document.getElementById("demo").innerHTML = womginxURL;
-    //document.writeln("<br>Your life is "+womginxURL)
-}
-
-function unchecked() {
-    document.getElementById("red").checked = false;
-}
 
 function searchbox() {
     var searchURL = document.getElementById("URL").value;
-    document.getElementById("demo2").innerHTML = searchURL;
-    //document.writeln("<br>Your life is "+searchURL);
-    window.location.href = 'https://womginx.repl.co/main/'+searchURL;
-
+    if (document.getElementById('womginx').checked) {
+        window.location.href =  'https://womginx.repl.co/main/'+searchURL;
+    } else {
+        window.location.href = 'https://ultraviolet-node-2.snoopy1035.repl.co/service/http%3A%2F%2F'+searchURL + '%2F';
+    }
 }
     </script>
 
-    <form>   
-        <input type="text" placeholder=" Search...." name="search" id="URL">   
-        <button type="submit" onclick="searchbox()">Submit</button>   
-        <input type="radio" id="womginx" name="?s" value="one" onclick="check()">
+    <form name="myform">   
+        <input type="text" placeholder=" Search...." name="search" id="URL">
+
+        <button type="reset" onclick="searchbox()">Go</button>   
+
+        <input type="radio" id="womginx" name="proxyname" value="one">
         <label for="womginx">womginx</label>
-        <input type="radio" id="alloy" name="?s" value="one" onclick="check()">
-        <label for="alloy">alloy</label>
+
+        <input type="radio" id="ultraviolet" name="proxyname" value="one">
+        <label for="ultraviolet">ultraviolet</label>
     </form>  
 
-    <p id="demo"></p>
-    <p id="demo2"></p>
 </html>
