@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <title>subLink</title>
 <head>
-<img src="subLinkdc.png">
+<img src="https://raw.githubusercontent.com/SupremeRubisco/subLink/main/subLinkdc.png">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
@@ -14,12 +14,17 @@
 
 function searchbox() {
     var searchURL = document.getElementById("URL").value;
+    var position = searchURL.search("http");
+    if (position!=-1) {
+        searchURL = searchURL.substring(position+6);
+    }
     if (document.getElementById('womginx').checked) {
         window.location.href =  'https://womginx.repl.co/main/'+searchURL;
     } else {
-        window.location.href = 'https://ultraviolet-node-2.snoopy1035.repl.co/service/http%3A%2F%2F'+searchURL + '%2F';
+        window.location.href = 'https://ultraviolet-node.supremerubisco.repl.co/service/http%3A%2F%2F'+searchURL + '%2F';
     }
 }
+
     </script>
 
     <form name="myform">   
