@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html>
+ <!-- Just importing some stuff -->
 <title>subLink</title>
 <head>
 <img id=something src="https://raw.githubusercontent.com/SupremeRubisco/subLink/main/sublinkdc.png" class="center">
@@ -9,9 +11,9 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<html>
-    <script>
 
+<!-- Functional Stuff -->
+    <script>
 function searchbox() {
     var searchURL = document.getElementById("URL").value;
     var position = searchURL.search("https");
@@ -32,20 +34,17 @@ function searchbox() {
     </script>
 
     <form name="myform">   
-        <input type="radio" id="womginx" name="proxyname" value="one">
-        <label for="womginx">womginx</label>
-
-        <input type="radio" id="ultraviolet" name="proxyname" value="one">
-        <label for="ultraviolet">ultraviolet</label>
-        <br>
-        <input type="text" placeholder=" Enter a URL" name="search" id="URL">
-<br>
-        <button type="reset" onclick="searchbox()">Go</button>   
-
-
+     <div class="flexContainer">
+     <input type="text" placeholder=" Enter a URL" name="search" id="URL">
+     <button type="reset" onclick="searchbox()">Go</button>   
+    </div>
+    <br>
+    <input type="radio" id="womginx" name="proxyname" value="one">
+    <label for="womginx">Womginx</label>
+    <input type="radio" id="ultraviolet" name="proxyname" value="one">
+    <label for="ultraviolet">Ultraviolet</label>
+    <br>
     </form>  
-
-</html>
 
 <style>
 #something{
@@ -56,6 +55,7 @@ function searchbox() {
     max-height: 80%;
     position: absolute;
     z-index: -1;
+    margin-top: 35px;
 }
 
     ::selection {
@@ -80,11 +80,12 @@ function searchbox() {
         font-family: nunito;
         margin-top: 10px;
         width: 350px;
+        margin-left: auto;
     }
     form{
         text-align: center;
         font-size: 20px;
-        margin-top: 340px;
+        margin-top: 370px;
     }
     ::placeholder{
         color: white;
@@ -99,6 +100,7 @@ function searchbox() {
         border-radius: 12px;
         transition-duration: .5s;
         margin-top: 10px;
+        margin-right: auto;
     }
     button:hover{
         background: white;
@@ -111,4 +113,13 @@ function searchbox() {
   width: 50%;
 }
 
+.flexContainer {
+    display: flex;
+}
+
+.inputField {
+    flex: 1;
+}
+
 </style>
+</html>
